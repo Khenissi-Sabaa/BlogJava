@@ -1,0 +1,306 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        /* navigation  */
+        
+        header {
+            z-index: 999;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 200px;
+            transition: 0.5s ease;
+            background: rgba(0, 0, 0, 0.37);
+            box-shadow: 0 50px 50px rgba(1, 1, 1, 0.356);
+        }
+        
+        header .brand {
+            color: rgb(230, 19, 19);
+            font-size: 2em;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.3s ease;
+            padding: 15px 35px;
+            cursor: default;
+            /* pointer-events: none; */
+        }
+        
+        header .brand:hover {
+            color: rgb(255, 255, 255);
+            background: rgba(0, 0, 0, 0.596);
+            border-radius: 10px;
+        }
+        
+        header.navigation {
+            position: relative;
+        }
+        
+        header .navigation .navigation-items a {
+            position: relative;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: 0.3s ease;
+        }
+        
+        header .navigation .navigation-items a:before {
+            content: " ";
+            position: absolute;
+            background: #fff;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            transition: 0.3s ease;
+        }
+        
+        header .navigation .navigation-items a:hover:before {
+            width: 100%;
+        }
+        
+        section {
+            padding: 100px 200px;
+        }
+        
+        .home:before {
+            z-index: 777;
+            content: '';
+            position: absolute;
+            background: rgba(43, 43, 43, 0.377);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .home {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background: #2696E9;
+        }
+        
+        .home .content {
+            z-index: 888;
+            color: #fff;
+            width: 70%;
+            margin-top: 50px;
+            display: none;
+        }
+        
+        .home .content.active {
+            display: block;
+        }
+        
+        .home .content h1 {
+            font-size: 4em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 75px;
+            margin-bottom: 40px;
+        }
+        
+        .home .content a {
+            background: #fff;
+            padding: 15px 35px;
+            color: #000000;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        
+        .span1 {
+            padding: 0px;
+            position: relative;
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .span1:before {
+            content: '';
+            position: absolute;
+            background: #000000;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s ease;
+        }
+        
+        .span1:hover:before {
+            width: 100%;
+        }
+        
+        .home .media-icons {
+            justify-content: center;
+            width: 250px;
+            height: 23em;
+            z-index: 888;
+            position: absolute;
+            right: 15%;
+            display: flex;
+            background: rgba(1, 1, 1, 0.767);
+            border-radius: 10px;
+            transition: 0.5s ease;
+            align-items: center;
+        }
+        
+        .home .media-icons img {
+            width: 200px;
+            height: 20em;
+            transition: 0.3s ease;
+        }
+        
+        .home .media-icons img:not(:last-child) {
+            margin-bottom: 20vh;
+        }
+        
+        .home .media-icons img:hover {
+            transform: scale(1.1);
+        }
+        
+        .home .content p {
+            margin-bottom: 65px;
+            padding: 50px;
+            width: 100%;
+            background: rgba(1, 1, 1, 0.767);
+            border-radius: 10px;
+        }
+        
+        .home .bg {
+            z-index: 000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slider-navigation {
+            z-index: 888;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(80px);
+            margin-bottom: 12px;
+        }
+        
+        .slider-navigation .nav-btn {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 20px;
+            width: 120px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 5%;
+            background: rgba(0, 0, 0, 0.301);
+            border-radius: 10%;
+            cursor: pointer;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.644);
+            transition: 0.3 ease;
+        }
+        
+        .slider-navigation .nav-btn.active {
+            color: #000000;
+            background: #ffffff;
+        }
+        
+        .slider-navigation .nav-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        .slider-navigation .nav-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        @media(max-width:1200px) {
+            section {
+                padding: 100px 20px;
+            }
+            .home .media-icons {
+                right: 5vw;
+                width: 15vw;
+                height: 30vh;
+                margin-top: 5vh;
+            }
+            .home .media-icons img {
+                width: 10vw;
+                height: 25vh;
+                transition: 0.3s ease;
+            }
+            header {
+                padding: 12px 20px;
+            }
+            header .navigation {
+                display: none;
+            }
+            header .navigation.active {
+                position: fixed;
+                background: rgba(1, 1, 1, 0.541);
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            header .navigation .navigation-items a {
+                color: rgb(255, 255, 255);
+                font-size: 1.2em;
+                margin: 20px;
+                text-shadow: 0 0px 5px rgba(255, 255, 255, 0.863);
+            }
+            header .navigation .navigation-items a:before {
+                background: rgb(255, 255, 255);
+                height: 3px;
+            }
+            header .navigation.active .navigation-items {
+                background: rgba(0, 0, 0, 0.575);
+                width: 600px;
+                max-width: 600px;
+                margin: 20px;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 10px;
+                border: outset #fff;
+                box-shadow: 0 0px 50px rgba(255, 255, 255, 0.226);
+            }
+            .menu-btn {
+                background: url(menu.png)no-repeat;
+                background-size: 30px;
+                background-position: center;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+            .menu-btn.active {
+                z-index: 999;
+                background: url(close.png)no-repeat;
+                background-size: 25px;
+                background-position: center;
+                transition: 0.2s ease;
+            }
+        }
